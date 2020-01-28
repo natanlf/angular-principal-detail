@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ContainerComponent } from './container/container.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ROUTES } from './app.routes';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
