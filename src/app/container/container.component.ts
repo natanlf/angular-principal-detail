@@ -22,7 +22,7 @@ import { trigger,state,style,transition, animate } from '@angular/animations';
     trigger(
       'enterAnimationGrid', [
         transition(':enter', [
-          style({transform: 'translateX(0)', opacity: 0}),
+          style({transform: 'translateX(-10%)', opacity: 1}),
           animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
         ]),
         transition(':leave', [
