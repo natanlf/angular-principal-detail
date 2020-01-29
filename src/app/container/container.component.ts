@@ -17,6 +17,19 @@ import { trigger,state,style,transition, animate } from '@angular/animations';
           animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
         ])
       ]
+    ),
+    
+    trigger(
+      'enterAnimationGrid', [
+        transition(':enter', [
+          style({transform: 'translateX(100%)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+        ]),
+        transition(':leave', [
+          style({transform: 'translateX(0)', opacity: 1}),
+          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
+        ])
+      ]
     )
   ]
 })
@@ -35,7 +48,7 @@ export class ContainerComponent implements OnInit {
   reciverFeedback(respostaFilho) {
     this.showPrincipal = respostaFilho.principal;
     this.showDetalhes = respostaFilho.detalhes;
-    this.showDetalhes ? this.detailsVisibility = 'visible' : this.detailsVisibility = 'hidden';
+    //this.showDetalhes ? this.detailsVisibility = 'visible' : this.detailsVisibility = 'hidden';
     console.log(this.detailsVisibility)
     console.log('Foi emitido o evento e chegou no pai >>>> ', respostaFilho);
   }

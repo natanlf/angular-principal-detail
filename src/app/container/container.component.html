@@ -1,6 +1,8 @@
 <div class="container">
     <div class="container-fluid">
-        <app-principal *ngIf="showPrincipal" (respostaFamilia)="reciverFeedback($event)"></app-principal>
-        <app-details [@enterAnimation] *ngIf="showDetalhes" (respostaFamilia)="reciverFeedback($event)"></app-details>
+        <div class="row">
+            <app-principal class="position-fx" [@enterAnimationGrid] *ngIf="showPrincipal" (respostaFamilia)="reciverFeedback($event)"></app-principal>
+            <app-details class="position-fx" [@enterAnimation] *ngIf="showDetalhes" (respostaFamilia)="reciverFeedback($event)"></app-details>
+        </div>
     </div>
 </div>
