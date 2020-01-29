@@ -13,7 +13,7 @@ import { trigger,state,style,transition, animate } from '@angular/animations';
           animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
         ]),
         transition(':leave', [
-          style({transform: 'translateX(0)', opacity: 1}),
+          style({transform: 'translateX(0)', opacity: 0.5}),
           animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
         ])
       ]
@@ -22,12 +22,12 @@ import { trigger,state,style,transition, animate } from '@angular/animations';
     trigger(
       'enterAnimationGrid', [
         transition(':enter', [
-          style({transform: 'translateX(100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateX(0)', opacity: 0.8}))
+          style({transform: 'translateX(0)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
         ]),
         transition(':leave', [
-          style({transform: 'translateX(0)', opacity: 1}),
-          animate('500ms', style({transform: 'translateX(100%)', opacity: 1}))
+          style({transform: 'translateX(0)', opacity: 0}),
+          animate('500ms', style({transform: 'translateX(0)', opacity: 0}))
         ])
       ]
     )
